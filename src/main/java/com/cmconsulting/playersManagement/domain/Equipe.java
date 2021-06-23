@@ -6,6 +6,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 
 @Entity
 @Table(name = "equipe")
@@ -25,17 +26,20 @@ public class Equipe implements Serializable {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "nom", nullable = false)
-    private String nom;
+    @Column(name = "nom_complet", nullable = false)
+    private String nomComplet;
 
-    @Column(name = "prenom", nullable = false)
-    private String prenom;
+    @Column(name = "surnom", nullable = true)
+    private String surnom;
 
-    @Enumerated(EnumType.STRING)
-    @Column(name = "post", nullable = false)
-    private Post post;
+    @Column(name = "fondation", nullable = true)
+    private Date fondtion;
+
+    @Column(name = "stade", nullable = true)
+
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name="equipe_id", nullable=false)
-    private Equipe equipe;
+    @JoinColumn(name="stade_id", nullable=false)
+    private Stade stade;
+
 }
