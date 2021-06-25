@@ -1,7 +1,5 @@
 package com.cmconsulting.playersManagement.domain;
 
-
-import com.cmconsulting.playersManagement.domain.enumeration.Post;
 import lombok.*;
 
 import javax.persistence.*;
@@ -34,8 +32,6 @@ public class Equipe implements Serializable {
 
     @Column(name = "fondation", nullable = true)
     private Date fondtion;
-
-    @Column(name = "stade", nullable = true)
 
 
     @ManyToOne(fetch = FetchType.EAGER)
