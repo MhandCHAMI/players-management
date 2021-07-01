@@ -14,6 +14,10 @@ public class PlayerController {
     @Value("${valueTest}")
     private String prioritySystemProperty;
 
+    /*
+     API for
+     test a reading file application.properties
+     */
     @GetMapping("/value")
     public String getValue()
     {
