@@ -4,8 +4,6 @@ import com.cmconsulting.playersManagement.domain.Player;
 import com.cmconsulting.playersManagement.service.PlayerService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -59,6 +57,6 @@ public class PlayerController {
         playerService.delete(id);
         return ResponseEntity.noContent().build();
     }
-    
+
 
 }
