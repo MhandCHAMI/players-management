@@ -11,11 +11,11 @@
    Estimation (2 heures )
 
 # Partie WEB
-  ## Exposition de deux CRUD services Rest un pour équipe et un pour
-players en respectant les standards REST
+  ## Exposition de deux CRUD services Rest un pour équipe et un pour players en respectant les standards REST
+  ## Créer un batch qui va consomation d'un web service externe ( RestTemplate et WebClient ) 
+  ## ajout des logs dans un intercepteur 
   ## Sécuristaion de l'API avec Spring Security
-  ## Création des utilisateurs dans le contexte Spring et utilisation
-de différents providers (mémoire, jdbc, ldap, service)
+  ## Création des utilisateurs dans le contexte Spring et utilisation de différents providers (mémoire, jdbc, ldap, service)
   ## gestion des roles avec spring security
   ## génration de la documentation de l'api avec SWAGGER
   ## Spring security embeded macanism vs OAUTH2 with keycloak

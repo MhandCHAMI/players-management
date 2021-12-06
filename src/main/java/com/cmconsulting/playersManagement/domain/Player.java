@@ -2,9 +2,12 @@ package com.cmconsulting.playersManagement.domain;
 
 import com.cmconsulting.playersManagement.domain.enumeration.Post;
 import lombok.*;
+import org.springframework.data.repository.cdi.Eager;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 
 @Entity
@@ -13,11 +16,9 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@ToString
-@EqualsAndHashCode
-public class Player implements Serializable {
+public class Player {
 
-    private static final long serialVersionUID = 1L;
+//    -
 
 
     @Id
@@ -44,4 +45,8 @@ public class Player implements Serializable {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="equipe_id", nullable=false)
     private Equipe equipe;
+
+//    @Column(name = "listString", nullable = false)
+//    private List<String> stringList;
+
 }

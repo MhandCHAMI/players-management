@@ -34,8 +34,8 @@ public class Equipe implements Serializable {
     private Date fondtion;
 
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name="stade_id", nullable=false)
-    private Stade stade;
+//    @ManyToOne(fetch = FetchType.EAGER)
+//    @JoinColumn(name="stade_id", nullable=false)
+//    private Stade stade;
 
 }
