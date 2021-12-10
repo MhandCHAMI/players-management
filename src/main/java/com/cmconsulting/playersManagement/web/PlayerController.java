@@ -1,6 +1,7 @@
 package com.cmconsulting.playersManagement.web;
 
 import com.cmconsulting.playersManagement.domain.Player;
+import com.cmconsulting.playersManagement.service.PlayerNotFoundException;
 import com.cmconsulting.playersManagement.service.PlayerService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,10 +22,17 @@ public class PlayerController {
 
 
     @GetMapping("/{id}")
-    public ResponseEntity<Player> getById(@PathVariable(name = "id", required = true) long id) {
-        log.debug("REST request to get Campagne : {}", id);
-        Player player = playerService.getById(id);
-        return ResponseEntity.ok(player);
+    public ResponseEntity getById(@PathVariable(name = "id", required = true) long id) {
+
+        try{
+
+            log.debug("REST request to get Campagne : {}", id);
+            Player player = playerService.getById(id);
+            return ResponseEntity.ok(player);
+
+        }catch ( PlayerNotFoundException e){
+          return ResponseEntity.ok().body(e.getMessage());
+        }
     }
 
 
