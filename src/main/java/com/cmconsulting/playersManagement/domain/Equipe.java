@@ -25,6 +25,8 @@ public class Equipe implements Serializable {
     @Column(name = "id")
     private Long id;
 
+
+    
     @Column(name = "nom_complet", nullable = false)
     private String nomComplet;
 
