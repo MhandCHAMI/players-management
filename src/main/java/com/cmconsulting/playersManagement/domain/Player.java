@@ -24,13 +24,16 @@ public class Player {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Long id;
+    @Builder.Default
+    private Long id = 20L;
 
     @Column(name = "nom", nullable = false)
-    private String nom;
+    @Builder.Default
+    private String nom="CHAMI";
 
     @Column(name = "prenom", nullable = false)
-    private String prenom;
+    @Builder.Default
+    private String prenom="mhand";
 
     @Column(name = "numero", nullable = false)
     private int numero;

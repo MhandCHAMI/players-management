@@ -1,6 +1,7 @@
 package com.cmconsulting.playersManagement.domain;
 
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -14,6 +15,7 @@ import java.util.Date;
 @Builder
 @ToString
 @EqualsAndHashCode
+@Audited(withModifiedFlag = true)
 public class Equipe implements Serializable {
 
     private static final long serialVersionUID = 1L;

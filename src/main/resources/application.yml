@@ -14,9 +14,10 @@ spring:
     password: postgres
   jpa:
     hibernate:
-      ddl-auto: validate
+      ddl-auto: create
   flyway:
     baseline-on-migrate: false
 
 #si on veut l'appler avec spring.valueTest la variable doit pas etre du meme niveau que spring
 valueTest: value
+file.input: liste_coffe.csv
