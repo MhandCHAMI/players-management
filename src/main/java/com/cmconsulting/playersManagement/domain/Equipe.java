@@ -28,8 +28,6 @@ public class Equipe implements Serializable {
     @Column(name = "nom_complet", nullable = false)
     private String nomComplet;
 
-    
-
     @Column(name = "surnom", nullable = true)
     private String surnom;
 
